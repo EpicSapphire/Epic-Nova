@@ -15,6 +15,15 @@
 
     .hero {
       padding: 100px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .logo {
+      width: 70vw;
+      max-width: 900px;
+      height: auto;
+      margin-bottom: 20px;
     }
 
     h1 {
@@ -25,8 +34,19 @@
       -webkit-text-fill-color: transparent;
     }
 
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
     p {
       opacity: 0.8;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      color: #aaa;
+      margin-top: 10px;
     }
 
     .cta {
@@ -60,18 +80,30 @@
       max-width: 300px;
       border-radius: 15px;
       backdrop-filter: blur(10px);
+
+    #fallback h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    #fallback p {
+      font-size: 1.5rem;
+      color: #aaa;
     }
   </style>
 </head>
 
 <body>
 
-  <div style="text-align: center; margin-top: 60px;">
+  <!--<div style="text-align: center; margin-top: 60px;">
   <img src="images/Epic_Nova_Logo.png" alt="Epic Nova Logo" 
        style="width: 70vw; max-width: 900px; height: auto;">
-</div>
+</div>-->
 
   <div class="hero">
+
+    <img src="images/Epic_Nova_Logo.png" alt="Epic Nova Logo" class="logo">
+    
     <h1>Epic Nova</h1>
     <p>Override Reality.</p>
 
