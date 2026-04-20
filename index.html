@@ -113,6 +113,30 @@
       font-size: 1.5rem;
       color: #aaa;
     }
+
+    .menu {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .menu-item {
+      font-size: 1.2em;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      transition: 0.2s ease;
+      letter-spacing: 1px;
+    }
+
+    /* Hover = game feel */
+    .menu-item:hover {
+      transform: scale(1.08);
+      text-shadow: 0 0 10px #00f0ff;
+    }
   </style>
 </head>
 
@@ -130,6 +154,24 @@
     
     <h1>Epic Nova</h1>
     <p>Override Reality.</p>
+
+  <div class="menu">
+
+    <a href="YOUR-SHOP-LINK" class="menu-item">
+      ▶ Start Drop
+    </a>
+
+    <a href="#email" class="menu-item">
+      ✦ Join the Nova Core
+    </a>
+
+    <a href="#about" class="menu-item">
+      ◈ Enter the World
+    </a>
+
+  </div>
+
+</div>
 
     <div class="cta">      
       <!--<button class="btn">Buy Our Sticker Pack!</button>-->
