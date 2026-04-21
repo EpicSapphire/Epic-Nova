@@ -122,10 +122,26 @@ body {
       width: 200px;
     }
 
-.nova-form {
+.nova-container {
+  min-height: 100vh;           /* full screen height */
   display: flex;
-  flex-direction: column; /* THIS makes it vertical */
-  gap: 10px; /* space between items */
+  flex-direction: column;
+  justify-content: center;     /* vertical center */
+  align-items: center;         /* horizontal center */
+  text-align: center;
+}
+
+.nova-form {
+  width: 300px;        /* controls size */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center; /* THIS centers inner elements */
+}
+
+.nova-input,
+.nova-textarea,
+.nova-button {
+  width: 100%;
   max-width: 300px;
-  margin: 0 auto;
 }
