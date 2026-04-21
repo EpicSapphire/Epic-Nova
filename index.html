@@ -10,20 +10,6 @@
 
 <body>
 
-  <audio id="clickSound" src="sounds/menu-click.mp3" preload="auto"></audio>
-
-  <script>
-  const clickSound = document.getElementById("clickSound");
-
-  document.querySelectorAll(".btn").forEach(button => {
-    button.addEventListener("click", () => {
-      clickSound.currentTime = 0;
-      clickSound.play();
-      clickSound.volume = 0.2;
-    });
-  });
-</script>
-
   <div class="hero">
     <img src="images/Epic_Nova_Logo.png" class="logo">
 
@@ -53,7 +39,19 @@
     <p>The beginning of something bigger.</p>
   </div>
 
-  <audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="sounds/menu-click.mp3" preload="auto"></audio>
+
+  <script>
+  const clickSound = document.getElementById("clickSound");
+
+  document.querySelectorAll(".btn").forEach(button => {
+    button.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+      clickSound.volume = 0.2;
+    });
+  });
+</script>
 
 </body>
 </html>
