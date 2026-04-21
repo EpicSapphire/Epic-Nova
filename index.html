@@ -26,10 +26,20 @@
     <h2>Join the Nova Core</h2>
     <p>Get early drops, exclusive content, and insider access.</p>
 
-    <form>
+    <!--<form>
       <input type="email" placeholder="Enter your email">
       <button class="btn form-btn">Join Now</button>
-    </form>
+    </form>-->
+
+    <form id="emailForm">
+  <input type="email" id="emailInput" placeholder="Enter your email to unlock access" required>
+  <button class="btn form-btn" type="submit">Unlock Access</button>
+</form>
+
+<p id="successMessage" style="display:none; color:#00f0ff; margin-top:15px;">
+  Welcome to the Nova Core.
+</p>
+    
   </div>
 
   <div class="section">
