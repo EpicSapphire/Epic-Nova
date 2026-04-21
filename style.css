@@ -126,4 +126,6 @@ body {
   display: flex;
   flex-direction: column; /* THIS makes it vertical */
   gap: 10px; /* space between items */
+  max-width: 300px;
+  margin: 0 auto;
 }
