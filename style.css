@@ -145,3 +145,7 @@ body {
   width: 100%;
   max-width: 300px;
 }
+
+.nova-textarea {
+  text-align: left; /* keeps typing natural */
+}
