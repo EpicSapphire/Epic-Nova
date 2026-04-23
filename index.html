@@ -108,7 +108,7 @@
     });
 
     if (response.ok) {
-      form.style.display = "none";
+      form.reset();
       successMessage.style.display = "block";
     } else {
       alert("Something glitched. Try again.");
