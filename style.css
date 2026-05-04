@@ -165,3 +165,9 @@ body {
 .nova-image:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 600px) {
+  .nova-image {
+    width: 220px;
+  }
+}
