@@ -150,3 +150,18 @@ body {
 .nova-textarea {
   text-align: left; /* keeps typing natural */
 }
+
+.nova-image {
+  width: 280px;              /* adjust based on your image */
+  max-width: 80%;
+  margin: 20px auto;
+  display: block;
+
+  /* subtle polish */
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.35));
+  transition: transform 0.3s ease;
+}
+
+.nova-image:hover {
+  transform: scale(1.05);
+}
