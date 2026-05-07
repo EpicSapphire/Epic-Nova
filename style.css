@@ -219,7 +219,7 @@ input:focus {
 ========================= */
 
 .nova-image {
-  width: clamp(200px, 50vw, 420px);
+  width: clamp(260px, 75vw, 650px);
   margin: 30px auto;
   margin: 20px auto;
   display: block;
@@ -405,7 +405,8 @@ input:focus {
 /*}*/
 
 /*.nova-image {
-  width: 280px;              /* adjust based on your image */
+  width: clamp(260px, 75vw, 650px);
+  /*width: 2              /* adjust based on your image */
 /*  max-width: 80%;
   margin: 20px auto;
   display: block;
