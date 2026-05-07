@@ -1,4 +1,219 @@
+/* =========================
+   GLOBAL BASE STYLES
+========================= */
+
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b0f1a, #05070d);
+  color: white;
+  text-align: center;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  padding: 60px 20px;
+}
+
+.logo {
+  width: 90vw;
+  max-width: 900px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.4));
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  background: linear-gradient(90deg, #00f0ff, #8a2eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* =========================
+   GAME MENU
+========================= */
+
+.menu {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  width: 260px;
+  padding: 16px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  border-radius: 14px;
+
+  background: linear-gradient(90deg, #00f0ff, #8a2eff);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  animation: pulse 2.5s infinite;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px #00f0ff, 0 0 25px #8a2eff;
+  border-color: #00f0ff;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(138, 46, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.2);
+  }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+}
+
+.section h3 {
+  color: #00f0ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section p {
+  max-width: 600px;
+  margin: 10px auto;
+  opacity: 0.8;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  padding: 14px;
+  width: 260px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.form-btn {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+}
+
+/* =========================
+   NOVA LAYOUT SYSTEM
+========================= */
+
+.nova-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nova-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.nova-input,
+.nova-textarea,
+.nova-button {
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.nova-textarea {
+  text-align: left;
+}
+
+/* =========================
+   NOVA IMAGE (CLEANED)
+========================= */
+
+.nova-image {
+  width: clamp(140px, 45vw, 280px);
+  height: auto;
+  margin: 20px auto;
+  display: block;
+
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.35));
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.nova-image:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 600px) {
+  .nova-image {
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    width: 220px;
+  }
+}
+
+/*body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: radial-gradient(circle at top, #0b0f1a, #05070d);
@@ -32,7 +247,7 @@ body {
     }
 
     /* GAME MENU STYLE */
-    .menu {
+   /* .menu {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
@@ -76,7 +291,7 @@ body {
     }
 
     /* SECTIONS */
-    .section {
+   /* .section {
       padding: 0;
     }
 
@@ -97,7 +312,7 @@ body {
     }
 
     /* EMAIL FORM */
-    form {
+   /* form {
       margin-top: 20px;
     }
 
@@ -124,20 +339,20 @@ body {
 
 .nova-container {
   min-height: 100vh;           /* full screen height */
-  display: flex;
+ /* display: flex;
   flex-direction: column;
   justify-content: center;     /* vertical center */
-  align-items: center;         /* horizontal center */
-  text-align: center;
+/*  align-items: center;         /* horizontal center */
+ /* text-align: center;
 }
 
 .nova-form {
   width: 300px;        /* controls size */
-  display: flex;
+ /* display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center; /* THIS centers inner elements */
-}
+/*}
 
 .nova-input,
 .nova-textarea,
@@ -149,16 +364,16 @@ body {
 
 .nova-textarea {
   text-align: left; /* keeps typing natural */
-}
+/*}*/
 
-.nova-image {
+/*.nova-image {
   width: 280px;              /* adjust based on your image */
-  max-width: 80%;
+/*  max-width: 80%;
   margin: 20px auto;
   display: block;
 
   /* subtle polish */
-  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.35));
+ /* filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.35));
   transition: transform 0.3s ease;
 }
 
@@ -170,4 +385,4 @@ body {
   .nova-image {
     width: 220px;
   }
-}
+}*/
