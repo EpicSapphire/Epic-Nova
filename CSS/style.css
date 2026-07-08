@@ -1,1 +1,994 @@
-/*code*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background:
+    radial-gradient(circle at top left, rgba(0, 240, 255, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(138, 46, 255, 0.25), transparent 35%),
+    #05070d;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: rgba(5, 7, 13, 0.9);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #00f0ff;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 12px #00f0ff;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+  min-height: 100vh;
+  padding: 40px 20px 70px;
+  text-align: center;
+}
+
+.logo {
+  width: min(85vw, 520px);
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 24px rgba(0, 240, 255, 0.45));
+}
+
+.eyebrow {
+  color: #00f0ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 10vw, 6rem);
+  background: linear-gradient(90deg, #00f0ff, #8a2eff, #ff4fd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  color: #cfd7ff;
+}
+
+/* ===========================
+   HUD CARD
+=========================== */
+
+.hud-card {
+  width: min(100%, 720px);
+  margin: 40px auto 0;
+  padding: 26px;
+  border-radius: 26px;
+  background: rgba(8, 13, 30, 0.88);
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  box-shadow:
+    0 0 30px rgba(0, 240, 255, 0.25),
+    inset 0 0 30px rgba(138, 46, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.hud-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hud-top h2 {
+  margin: 0;
+}
+
+.hud-top p {
+  margin: 4px 0 0;
+  color: #aab4d8;
+}
+
+.status {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #00f0ff;
+  color: #05070d;
+  font-weight: bold;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.8);
+}
+
+/* ===========================
+   PLAYER CARD
+=========================== */
+
+.player-card {
+  margin: 24px 0;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 240, 255, 0.18),
+    rgba(255, 79, 216, 0.1)
+  );
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: inset 0 0 22px rgba(0, 240, 255, 0.08);
+}
+
+.avatar-ring,
+.avatar-frame {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid #ff4fd8;
+  box-shadow:
+    0 0 18px rgba(255, 79, 216, 0.75),
+    0 0 35px rgba(0, 240, 255, 0.45),
+    inset 0 0 12px rgba(255, 255, 255, 0.08);
+}
+
+.avatar-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00f0ff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nova Guide Card */
+
+.nova-guide-card {
+  align-items: flex-start;
+}
+
+.nova-guide-card .player-info p {
+  line-height: 1.6;
+}
+
+.nova-ready {
+  margin-top: 12px !important;
+  color: #00f0ff !important;
+  font-weight: bold;
+}
+
+.player-info {
+  flex: 1;
+  text-align: left;
+}
+
+.player-label {
+  margin: 0;
+  color: #00f0ff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.player-info h3 {
+  margin: 4px 0;
+  font-size: 1.6rem;
+}
+
+.player-info p {
+  margin: 0;
+  color: #c5cbe8;
+}
+
+.player-badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8a2eff, #ff4fd8);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 0 14px rgba(255, 79, 216, 0.6);
+}
+
+/* ===========================
+   STASH
+=========================== */
+
+.stash-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.stash-box {
+  padding: 24px;
+  text-align: center;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 240, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  transition: 0.25s ease;
+}
+
+.stash-box:hover {
+  transform: translateY(-4px);
+}
+
+.currency-icon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px;
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.7));
+  transition: 0.25s ease;
+}
+
+.stash-box:hover .currency-icon {
+  transform: scale(1.12);
+}
+
+.stash-box span {
+  display: block;
+  color: #aaf6ff;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+}
+
+.stash-box strong {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
+}
+
+.premium,
+.featured {
+  border-color: rgba(255, 79, 216, 0.7);
+  box-shadow: 0 0 18px rgba(255, 79, 216, 0.25);
+}
+
+/* ===========================
+   ENERGY
+=========================== */
+
+.energy-bar {
+  margin: 24px 0;
+}
+
+.energy-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #cfd7ff;
+}
+
+.bar {
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #101629;
+  border: 1px solid rgba(0, 240, 255, 0.4);
+}
+
+.fill {
+  width: 72%;
+  height: 100%;
+  background: linear-gradient(90deg, #00f0ff, #8a2eff, #ff4fd8);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.8);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.hud-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hud-buttons .btn {
+  flex: 1;
+  min-width: 180px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00f0ff, #8a2eff);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.28);
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 79, 216, 0.65);
+  box-shadow: 0 0 10px rgba(255, 79, 216, 0.18);
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.section p {
+  max-width: 650px;
+  margin: 14px auto;
+  color: #c5cbe8;
+  line-height: 1.6;
+}
+
+.alt {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+form {
+  margin-top: 24px;
+}
+
+input {
+  width: min(100%, 340px);
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,240,255,.35);
+  background: rgba(255,255,255,.08);
+  background-color: rgba(255,255,255,.08);
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 150px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #9aa3c7;
+}
+
+.form-btn {
+  margin-left: 8px;
+}
+
+/* ===========================
+   PROFILE / STORE PAGES
+=========================== */
+
+.profile-page,
+.store-page,
+.project-page,
+.about-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-card {
+  max-width: 760px;
+}
+
+.empty-profile {
+  opacity: 0.95;
+}
+
+.profile-form {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.profile-form label {
+  text-align: left;
+  color: #aaf6ff;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.profile-form input {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ===========================
+   NOVA CORE STORE
+=========================== */
+
+.store-note {
+  margin: 30px 0;
+  color: #d6ddff;
+  line-height: 1.6;
+}
+
+.core-pack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 40px 0 50px;
+}
+
+.core-pack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: 32px 24px 24px;
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 240, 255, 0.12),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  transition: 0.25s;
+}
+
+.core-pack:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
+}
+
+.core-pack h3 {
+  margin: 18px 0 10px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.core-pack strong {
+  display: block;
+  font-size: 2rem;
+  color: #00f0ff;
+  margin-bottom: 8px;
+}
+
+.core-pack span {
+  font-size: 1.25rem;
+  color: #ff4fd8;
+  font-weight: bold;
+}
+
+.pack-ribbon {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #00f0ff;
+  color: #05070d;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.5);
+}
+
+.featured-ribbon {
+  background: linear-gradient(90deg, #8a2eff, #ff4fd8);
+  color: white;
+}
+
+.founder-ribbon {
+  background: linear-gradient(90deg, #ff9c2f, #ffd84d);
+  color: #111;
+}
+
+.purchase-btn {
+  margin-top: 18px;
+  padding: 12px 22px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #00f0ff, #8a2eff);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.25s;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.35);
+}
+
+.core-pack:hover .purchase-btn {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+/* ===========================
+   PROJECT NOVA / ABOUT
+=========================== */
+
+.project-terminal,
+.about-terminal {
+  max-width: 900px;
+}
+
+.terminal-hero {
+  padding: 40px 0 28px;
+  text-align: center;
+}
+
+.terminal-hero h1 {
+  font-size: clamp(2.2rem, 7vw, 4.5rem);
+  margin: 10px 0;
+}
+
+.terminal-hero p {
+  max-width: 720px;
+  margin: 14px auto;
+  color: #c5cbe8;
+  line-height: 1.7;
+}
+
+.terminal-grid,
+.unlock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.terminal-grid {
+  margin: 28px 0;
+}
+
+.terminal-panel,
+.unlock-card,
+.log-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.terminal-panel {
+  text-align: center;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 240, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid rgba(0, 240, 255, 0.25);
+}
+
+.panel-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00f0ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.terminal-panel strong {
+  font-size: 1.3rem;
+}
+
+.dev-section {
+  margin-top: 46px;
+}
+
+.dev-section h2 {
+  margin-bottom: 22px;
+  color: white;
+  text-align: center;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #cfd7ff;
+}
+
+.progress-100 { width: 100%; }
+.progress-90 { width: 90%; }
+.progress-60 { width: 60%; }
+.progress-50 { width: 50%; }
+.progress-35 { width: 35%; }
+.progress-25 { width: 25%; }
+.progress-10 { width: 10%; }
+
+.log-card {
+  margin-bottom: 18px;
+  border: 1px solid rgba(0, 240, 255, 0.22);
+}
+
+.log-date {
+  margin: 0 0 8px;
+  color: #00f0ff;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.log-card h3 {
+  margin: 0 0 10px;
+}
+
+.log-card p,
+.unlock-card p {
+  color: #c5cbe8;
+  line-height: 1.6;
+}
+
+.unlock-card {
+  text-align: center;
+  border: 1px solid rgba(255, 79, 216, 0.3);
+}
+
+.unlock-card span {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 79, 216, 0.18);
+  color: #ff4fd8;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.unlock-card h3 {
+  margin: 8px 0;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.site-footer {
+  margin-top: 80px;
+  background: rgba(5, 7, 13, 0.92);
+  border-top: 1px solid rgba(0, 240, 255, 0.25);
+  padding: 50px 30px 20px;
+  text-align: center;
+  color: #9aa3c7;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand h2 {
+  margin: 0;
+  color: #00f0ff;
+  letter-spacing: 3px;
+}
+
+.footer-tagline {
+  color: #ff4fd8;
+  font-weight: bold;
+}
+
+.footer-brand p,
+.footer-contact p {
+  color: #c5cbe8;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  margin-top: 0;
+  color: #00f0ff;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: #00f0ff;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  color: #9aa3c7;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   TABLET / SMALL DESKTOP
+=========================== */
+
+@media (max-width: 900px) {
+  .main-nav {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    margin-top: 15px;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-content,
+  .terminal-grid,
+  .unlock-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .project-page,
+  .about-page,
+  .store-page,
+  .profile-page {
+    padding: 30px 14px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 24px 14px 50px;
+  }
+
+  .logo {
+    width: min(90vw, 420px);
+  }
+
+  .hud-card {
+    width: 100%;
+    margin: 24px auto 0;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .hud-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .hud-top h2 {
+    font-size: 1.8rem;
+  }
+
+  .hud-top p {
+    font-size: 1rem;
+  }
+
+  .status {
+    padding: 8px 18px;
+    font-size: 0.95rem;
+  }
+
+  .player-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .player-info {
+    text-align: center;
+  }
+
+  .player-info h3 {
+    font-size: 1.9rem;
+  }
+
+  .player-info p {
+    font-size: 1rem;
+  }
+
+  .player-label {
+    font-size: 0.8rem;
+  }
+
+  .stash-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stash-box {
+    padding: 18px;
+  }
+
+  .currency-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .stash-box strong {
+    font-size: 2.8rem;
+  }
+
+  .hud-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hud-buttons .btn {
+    min-width: 100%;
+  }
+
+  .form-btn {
+    display: block;
+    width: min(100%, 340px);
+    margin: 12px auto 0;
+  }
+}
+
+.subtitle {
+  margin: 8px 0 4px;
+  font-size: 1.15rem;
+  color: #cfd7ff;
+  line-height: 1.5;
+}
+
+/* ===========================
+   MOBILE NOVA GUIDE CARD
+=========================== */
+
+@media (max-width: 768px) {
+  .nova-guide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nova-guide-card .avatar-frame {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  .nova-guide-card .player-info {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .nova-guide-card .player-label {
+    text-align: center;
+  }
+
+  .nova-guide-card h3 {
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+
+  .nova-guide-card p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .nova-ready {
+    margin-top: 18px !important;
+  }
+
+  .nova-guide-card .player-badge {
+    order: 3;
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+}
