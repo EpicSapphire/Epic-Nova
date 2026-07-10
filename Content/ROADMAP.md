@@ -1,374 +1,288 @@
-# 🎮 Epic Nova Website Roadmap
+# EPIC NOVA WEBSITE ROADMAP
 
-> **Override Reality.**
+**Current Version: 1.0 — Early Access**
 
-## 🌟 Current Development Phase
-
-**Version 1.0 — Early Access**
-
-The Epic Nova Website Portal is nearing its initial public launch.
-
-The core website structure, shared components, Nova Core Store, Stripe integration, community pages, and Early Access systems have been established.
-
-Current development is focused on final testing, launch preparation, and establishing the foundation for future Player Profiles, Nova Core wallets, and Project Nova integration.
+This roadmap tracks the development of the Epic Nova website, Nova Core system, player platform, community features, and Project Nova integration.
 
 ---
 
-## 📂 Website Structure
+# 🌌 CURRENT STATUS
 
-### Core Pages
+## Epic Nova Version 1.0
+
+**STATUS: LIVE — EARLY ACCESS**
+
+The Epic Nova website is now publicly available.
+
+Current priorities are:
+
+1. Verify the complete live website.
+2. Complete the first successful Nova Core purchase workflow.
+3. Track Early Access purchases.
+4. Create Version 1.0 backups.
+5. Announce the website launch.
+6. Begin gathering real visitor feedback.
+
+---
+
+# 🌐 WEBSITE STRUCTURE
+
+## Completed Pages
 
 - [x] `index.html`
 - [x] `profile.html`
 - [x] `buy-cores.html`
-- [x] `project-nova.html`
 - [x] `nova-core.html`
+- [x] `project-nova.html`
 - [x] `about.html`
 - [x] `communications.html`
 - [x] `thank-you.html`
 
-### Styles and Scripts
+---
+
+## Shared Website Systems
 
 - [x] `CSS/style.css`
 - [x] `JS/script.js`
-
-### Shared Components
-
 - [x] `components/nav.html`
 - [x] `components/footer.html`
-- [x] Add shared navigation loader.
-- [x] Add shared footer loader.
-- [x] Connect all website pages to shared navigation.
-- [x] Connect all website pages to shared footer.
-- [x] Remove duplicated navigation and footer code from individual pages.
+- [x] Shared navbar loader.
+- [x] Shared footer loader.
+- [x] Responsive mobile design.
+- [x] Responsive desktop design.
 
 ---
 
-## 🏠 Home Portal
+# 💎 NOVA CORE ECONOMY
 
-- [x] Create Epic Nova hero section.
-- [x] Add Epic Nova logo.
-- [x] Add Nova Byte Digital Guide.
-- [x] Add Nova Bits display.
-- [x] Add Nova Shards display.
-- [x] Add Nova Cores display.
-- [x] Add Core Energy display.
-- [x] Add navigation to About.
-- [x] Add navigation to Nova Core Store.
-- [x] Add navigation to Project Nova.
-- [x] Add Nova Core community section.
-- [ ] Connect currency displays to future Player Profile database.
-- [ ] Connect Core Energy to future progression systems.
+## Currency System
+
+- [x] Nova Bits established as common currency.
+- [x] Nova Shards established as rare currency.
+- [x] Nova Cores established as premium supporter currency.
+- [x] Currency artwork created.
+- [x] Currency system introduced on the website.
 
 ---
 
-## 💎 Nova Core Store
+## Early Access Store
 
-- [x] Create `buy-cores.html`.
+- [x] Create Nova Core Store.
 - [x] Create Supporter Pack.
 - [x] Create Early Access Pack.
 - [x] Create Founder Pack.
-- [x] Add Nova Core product images.
-- [x] Add Early Access messaging.
-- [x] Create Stripe account.
-- [x] Create Stripe products.
-- [x] Create Stripe Payment Links.
-- [x] Configure post-purchase redirect.
-- [x] Create Mission Complete / Thank You page.
-- [x] Connect DEV website to Stripe.
-- [ ] Test all Stripe Payment Links.
-- [ ] Test complete purchase flow.
-- [ ] Establish Early Access purchase tracking system.
-- [ ] Develop automated Nova Core wallet system.
+- [x] Connect packs to Stripe Payment Links.
+- [x] Configure Stripe automatic tax collection.
+- [x] Configure successful payment redirect.
+- [x] Create Thank You page.
+- [x] Collect customer names.
+- [x] Collect optional Future Epic Nova Player Name.
+- [x] Create Nova Core Early Access Ledger.
+- [x] Create Fulfillment Status workflow.
+- [ ] Complete first successful purchase.
+- [ ] Verify manual Early Access fulfillment process.
 
 ---
 
-## 👤 Player Profile System
+# 👤 PLAYER PLATFORM
 
-### Version 1.0 — Preview
+## Version 1.0
 
-- [x] Create `profile.html`.
-- [x] Create Player Profile Preview.
-- [x] Add COMING SOON status.
-- [x] Add Nova Byte Digital Guide.
-- [x] Add Nova Bits Preview.
-- [x] Add Nova Shards Preview.
-- [x] Add Nova Cores Preview.
-- [x] Add Future Profile Features.
-- [x] Create Google Profile Request Form.
-- [x] Connect Profile Request Form to Google Sheets.
-- [ ] Test Profile Request Form.
-- [ ] Establish Early Access manual profile process.
+- [x] Create Player Profile preview.
+- [x] Create future currency stash display.
+- [x] Add Early Access messaging.
+- [x] Add future profile feature previews.
+- [x] Establish email as future purchase matching identifier.
 
-### Future Player System
+---
 
-- [ ] User registration.
-- [ ] User authentication.
+## Future Development
+
+- [ ] Player registration.
+- [ ] Secure authentication.
 - [ ] Player database.
-- [ ] Individual Player Profiles.
-- [ ] Gamer usernames.
-- [ ] Profile images.
-- [ ] Nova Bit balances.
-- [ ] Nova Shard balances.
-- [ ] Nova Core wallets.
-- [ ] Player levels.
-- [ ] XP system.
+- [ ] Player profile customization.
+- [ ] Nova Bit wallet.
+- [ ] Nova Shard wallet.
+- [ ] Nova Core wallet.
+- [ ] Automated Stripe fulfillment.
 - [ ] Achievements.
-- [ ] Badges.
-- [ ] Player inventories.
+- [ ] Inventory.
 - [ ] Digital collectibles.
+- [ ] Profile cosmetics.
 - [ ] Project Nova synchronization.
 
 ---
 
-## 🌌 Nova Core Community
+# 🌌 NOVA CORE COMMUNITY
 
-- [x] Create `nova-core.html`.
-- [x] Introduce the Nova Core community.
-- [x] Add Nova Byte Digital Guide.
-- [x] Add Player Profile information.
-- [x] Add future Nova Core Hub information.
-- [x] Add future Events information.
-- [x] Add Community Goals.
-- [x] Add Early Access development status.
-- [ ] Develop interactive community functionality.
-- [ ] Develop community events.
-- [ ] Develop community challenges.
-- [ ] Develop future game nights and livestream integration.
+## Version 1.0
+
+- [x] Create Nova Core community page.
+- [x] Establish Early Access community concept.
+- [x] Connect Nova Core page to website navigation.
 
 ---
 
-## 🎮 Project Nova
+## Future Development
 
-- [x] Create `project-nova.html`.
-- [x] Create Development Terminal.
-- [x] Add current development mission.
-- [x] Add Unreal Engine information.
-- [x] Add development progress displays.
-- [x] Add Mission Logs.
-- [x] Add Future Unlocks.
-- [x] Add Project Nova support links.
-- [ ] Continue first playable prototype.
-- [ ] Develop Nova Byte game character.
-- [ ] Develop Project Nova environment.
-- [ ] Develop Nova Core gameplay systems.
-- [ ] Develop Player Profile synchronization.
-- [ ] Develop online systems.
+- [ ] Community membership systems.
+- [ ] Community milestones.
+- [ ] Early supporter recognition.
+- [ ] Community events.
+- [ ] Player activity systems.
+- [ ] Community statistics.
 
 ---
 
-## 📖 About Epic Nova
+# 🎮 PROJECT NOVA
 
-- [x] Create `about.html`.
-- [x] Explain the Epic Nova mission.
-- [x] Explain the long-term vision.
-- [x] Introduce Nova Byte.
-- [x] Explain Nova Bits.
-- [x] Explain Nova Shards.
-- [x] Explain Nova Cores.
-- [x] Add current development status.
-- [ ] Continue updating as Epic Nova evolves.
+## Current Development
 
----
-
-## 📡 Communications
-
-- [x] Create `communications.html`.
-- [x] Add Communications Terminal.
-- [x] Add Nova Byte Digital Guide.
-- [x] Add Questions section.
-- [x] Add Partnerships section.
-- [x] Add Suggestions section.
-- [x] Add contact form design.
-- [x] Add Send Email functionality.
-- [x] Add Early Access response information.
-- [ ] Test all communication functionality.
-- [ ] Connect future contact form backend.
+- [x] Create Unreal Engine project.
+- [x] Name project `Project_Nova`.
+- [x] Create Project Nova website portal.
+- [x] Create development progress interface.
+- [x] Create Mission Log system.
+- [x] Create Future Unlock system.
+- [x] Establish Alpha 0.0.1 development status.
 
 ---
 
-## 🎉 Mission Complete
+## Prototype Roadmap
 
-- [x] Create `thank-you.html`.
-- [x] Add Mission Complete status.
-- [x] Add Nova Byte Digital Guide.
-- [x] Add Early Supporter messaging.
-- [x] Add purchase confirmation information.
-- [x] Add future adventure information.
-- [x] Add Return Home button.
-- [x] Add Project Nova button.
-- [x] Add Nova Core button.
-- [x] Configure Stripe redirect.
-- [ ] Test successful purchase redirect.
-- [ ] Connect future purchases to automated Nova Core wallets.
+- [ ] Build first playable environment.
+- [ ] Create dark futuristic room.
+- [ ] Add blue and magenta lighting.
+- [ ] Add glowing Nova Bit crystal.
+- [ ] Add playable third-person character.
+- [ ] Continue Nova Byte 3D character development.
+- [ ] Develop initial gameplay systems.
+- [ ] Explore online systems.
+- [ ] Explore mobile gameplay.
 
 ---
 
-## 💰 Epic Nova Currency System
+# 📡 COMMUNICATIONS
 
-### Nova Bits
-
-**Classification:** Common
-
-- [x] Establish Nova Bits concept.
-- [x] Create Nova Bit visual design.
-- [x] Add Nova Bits to website.
-- [ ] Develop earning systems.
-- [ ] Connect to Player Profiles.
-- [ ] Connect to Project Nova.
-
-### Nova Shards
-
-**Classification:** Rare
-
-- [x] Establish Nova Shards concept.
-- [x] Create Nova Shard visual design.
-- [x] Add Nova Shards to website.
-- [ ] Develop earning systems.
-- [ ] Connect to Player Profiles.
-- [ ] Connect to Project Nova.
-
-### Nova Cores
-
-**Classification:** Premium / Early Access Supporter Credits
-
-- [x] Establish Nova Cores concept.
-- [x] Create Nova Core visual design.
-- [x] Add Nova Cores to website.
-- [x] Create Nova Core Store.
-- [x] Create Stripe products.
-- [x] Create Stripe Payment Links.
-- [ ] Establish Early Access balance tracking.
-- [ ] Develop automated Nova Core wallets.
-- [ ] Connect Nova Cores to Player Profiles.
-- [ ] Connect Nova Cores to Project Nova.
+- [x] Create Communications page.
+- [ ] Complete final form testing.
+- [ ] Verify submissions.
+- [ ] Establish visitor feedback tracking.
+- [ ] Establish community update system.
 
 ---
 
-## 🗄️ Data and Account Systems
+# 📊 DATA SYSTEMS
 
-### Version 1.0
+## Version 1.0
 
-- [x] Google Profile Request Form.
-- [x] Google Sheets profile tracking.
-- [x] Stripe payment processing.
-- [ ] Early Access Nova Core purchase tracking.
-- [ ] Manual player balance tracking.
-
-### Future Systems
-
-- [ ] Select Player Profile database platform.
-- [ ] Develop secure user authentication.
-- [ ] Create Player Profile database.
-- [ ] Create Nova Core wallet database.
-- [ ] Connect Stripe purchases to Player Accounts.
-- [ ] Automate Nova Core balance updates.
-- [ ] Develop secure Stripe webhook system.
-- [ ] Connect website accounts to Project Nova.
+- [x] Create `DATA/` directory.
+- [x] Remove obsolete `test.json`.
+- [x] Add placeholder data files.
+- [x] Create Nova Core Early Access Ledger.
+- [x] Create manual fulfillment tracking system.
 
 ---
 
-## 📱 Responsive Design
+## Future Development
 
-- [x] Create desktop layout.
-- [x] Create mobile layout.
-- [x] Create responsive navigation.
-- [x] Create responsive footer.
-- [x] Create responsive HUD cards.
-- [x] Create responsive Nova Core Store.
-- [x] Create responsive forms.
-- [ ] Perform final testing across desktop devices.
-- [ ] Perform final testing across mobile devices.
-- [ ] Continue improving accessibility.
+- [ ] Determine production database platform.
+- [ ] Design player data structure.
+- [ ] Design wallet data structure.
+- [ ] Design purchase matching system.
+- [ ] Create secure backend.
+- [ ] Create Stripe webhook system.
+- [ ] Automate Nova Core fulfillment.
 
 ---
 
-## 💾 Development Workflow
+# 📢 CONTENT & GROWTH
 
-- [x] Establish Development GitHub repository.
-- [x] Establish main public GitHub repository.
-- [x] Back up website files to PC.
-- [x] Back up website files to Google Drive.
-- [x] Establish DEV → MAIN development workflow.
+## Immediate Priority
 
-### Development Process
-
-1. Build new features on DEV.
-2. Test new features on DEV.
-3. Fix bugs and issues.
-4. Create backups.
-5. Push tested updates to MAIN.
-6. Verify the public website.
-7. Continue development on DEV.
+- [ ] Create Version 1.0 launch announcement.
+- [ ] Create Nova Byte website launch video.
+- [ ] Promote the Epic Nova website.
+- [ ] Send visitors to the Nova Core.
+- [ ] Begin collecting real visitor feedback.
+- [ ] Monitor Early Access supporter activity.
 
 ---
 
-## 🚀 Current Priority — Version 1.0 Launch
+## Future Content
 
-1. Connect all final Stripe Payment Links.
-2. Test each Nova Core package.
-3. Test the complete Stripe purchase flow.
-4. Verify successful purchase redirects to `thank-you.html`.
-5. Establish Early Access Nova Core purchase tracking.
-6. Test Google Profile Request Form.
-7. Verify Google Sheets receives Profile Requests.
-8. Test Communications functionality.
-9. Test every navigation link.
-10. Test every footer link.
-11. Test all pages on desktop.
-12. Test all pages on mobile.
-13. Check for broken links and missing files.
-14. Check for browser console errors.
-15. Create final Version 1.0 backup.
-16. Push DEV website to MAIN.
-17. Verify the public website.
-18. Launch Epic Nova Version 1.0 — Early Access.
+- [ ] Project Nova development videos.
+- [ ] Mission Log updates.
+- [ ] Nova Byte commentary.
+- [ ] Gaming content.
+- [ ] Epic Nova universe content.
+- [ ] Community announcements.
 
 ---
 
-## 🔮 Version 2.0 Priorities
+# ⚡ VERSION 1.1 PRIORITIES
 
-After the successful launch of Version 1.0:
+Version 1.1 should focus on improvements discovered after real visitors begin using Version 1.0.
 
-1. Select the Player Profile database system.
-2. Add secure user authentication.
-3. Create real Player Profiles.
-4. Create Nova Core wallets.
-5. Connect Stripe purchases to player accounts.
-6. Automate Nova Core balance updates.
-7. Develop achievements and badges.
-8. Develop player inventories.
-9. Expand Nova Core community functionality.
-10. Connect the Epic Nova website with Project Nova.
+Potential improvements include:
 
----
+- Website bug fixes.
+- UI polish.
+- Better mobile optimization.
+- New Project Nova Mission Logs.
+- Improved Nova Byte interactions.
+- Community updates.
+- Visitor feedback improvements.
 
-## ⚡ Development Philosophy
-
-Epic Nova is being developed through incremental releases.
-
-Version 1.0 establishes the public foundation.
-
-Version 2.0 begins transforming the website into a connected player platform.
-
-Future versions will continue connecting the website, Nova Core community, player systems, and Project Nova into one growing universe.
-
-The objective is not to build everything at once.
-
-The objective is to build each system carefully, test it, release it, and continue expanding the adventure.
+Major account and database systems should not be rushed into Version 1.1 unless there is a clear need.
 
 ---
 
-> **We don't just make content.**
->
-> **We build adventures.**
->
-> **We don't just build games.**
->
-> **We build worlds.**
->
-> **We don't just create a brand.**
->
-> **We create a universe.**
+# 🚀 VERSION 2.0 VISION
 
-# ⚡ Override Reality.
+Version 2.0 represents the beginning of the full Epic Nova player platform.
+
+Planned systems include:
+
+- Player accounts.
+- Secure authentication.
+- Player database.
+- Personal profiles.
+- Nova Core wallets.
+- Automated Stripe fulfillment.
+- Achievements.
+- Inventory.
+- Digital collectibles.
+- Project Nova synchronization.
+- Community systems.
+
+---
+
+# 🌟 LONG-TERM VISION
+
+Epic Nova aims to become a connected gaming universe featuring:
+
+- Games.
+- Player Profiles.
+- Digital Currency.
+- Community Features.
+- Achievements.
+- Collectibles.
+- Original Stories.
+- Creator Content.
+- Project Nova.
+
+The website is the foundation.
+
+The Nova Core is the community.
+
+Nova Byte is the guide.
+
+Project Nova is the first game.
+
+Together, these systems will continue growing into the Epic Nova universe.
+
+---
+
+**Override Reality.**
