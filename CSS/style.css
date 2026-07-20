@@ -374,9 +374,56 @@ h1 {
 
 .stash-box strong {
   display: block;
-  font-size: 2.4rem;
+
+  margin-top: 10px;
+
+  font-size: clamp(1.35rem, 1.8vw, 1.9rem);
+
   font-weight: 800;
-  text-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
+
+  line-height: 1.25;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 10px rgba(0, 240, 255, 0.8);
+
+  word-break: break-word;
+}
+
+/* ===========================
+   AWAITING ENERGY
+=========================== */
+
+.awaiting-energy {
+  width: 0%;
+
+  background: linear-gradient(
+    90deg,
+    #00f0ff,
+    #8a2eff,
+    #ff4fd8
+  );
+
+  box-shadow: none;
+
+  transition: width 0.4s ease;
+}
+
+/* ===========================
+   AWAITING DATA
+=========================== */
+
+.awaiting-data {
+  display: block;
+
+  text-align: center;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  opacity: 0.95;
 }
 
 .premium,
@@ -1700,11 +1747,6 @@ textarea::placeholder {
   .core-pack {
     padding: 1.5rem 1.15rem;
   }
-}
-
-.awaiting-energy {
-  width: 0;
-  box-shadow: none;
 }
 
 /* ===========================
