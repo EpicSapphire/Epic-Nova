@@ -1702,6 +1702,11 @@ textarea::placeholder {
   }
 }
 
+.awaiting-energy {
+  width: 0;
+  box-shadow: none;
+}
+
 /* ===========================
    MOBILE NOVA GUIDE CARD
 =========================== */
