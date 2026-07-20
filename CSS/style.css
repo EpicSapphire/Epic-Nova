@@ -1358,3 +1358,790 @@ textarea::placeholder {
     }
 
 }
+
+/* =========================================================
+   EPIC NOVA — LAYOUT FIXES AND MISSING STYLES
+   Place this entire section at the bottom of style.css
+========================================================= */
+
+
+/* =========================================================
+   GENERAL TYPOGRAPHY FIXES
+========================================================= */
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.65;
+}
+
+.subtitle {
+  margin: 8px 0 4px;
+  color: #cfd7ff;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PAGE WIDTH FIXES
+========================================================= */
+
+/*
+  The original .hud-card rule limits all cards to 720px.
+  These page-specific rules allow the new pages to be wider.
+*/
+
+.project-nova-page .hud-card {
+  width: 100%;
+  max-width: none;
+}
+
+.store-page .profile-card {
+  width: min(100%, 1100px);
+  max-width: 1100px;
+}
+
+.project-nova-page {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.project-nova-page > * + * {
+  margin-top: 2rem;
+}
+
+
+/* =========================================================
+   PROJECT NOVA HERO
+========================================================= */
+
+.project-hero {
+  width: 100%;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.project-hero .hud-top h1 {
+  margin: 4px 0 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+}
+
+.project-hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.35fr);
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  margin-top: 2rem;
+}
+
+.project-hero-copy {
+  min-width: 0;
+  text-align: left;
+}
+
+.project-hero-copy h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.project-hero-copy p {
+  max-width: 720px;
+  color: #c5cbe8;
+}
+
+.project-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.project-hero-image {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow:
+    0 0 28px rgba(0, 240, 255, 0.2),
+    0 0 45px rgba(138, 46, 255, 0.14);
+}
+
+
+/* =========================================================
+   PROJECT NOVA SECTIONS
+========================================================= */
+
+.project-section,
+.project-support-section {
+  width: 100%;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.project-section > h2,
+.project-support-section h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.section-intro {
+  max-width: 820px;
+  margin: 0.85rem auto;
+  color: #c5cbe8;
+  line-height: 1.7;
+}
+
+.project-section > .eyebrow,
+.project-section > h2 {
+  text-align: center;
+}
+
+
+/* =========================================================
+   PROJECT FEATURE CARDS
+========================================================= */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 240, 255, 0.22);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0, 240, 255, 0.09),
+      rgba(138, 46, 255, 0.06)
+    ),
+    rgba(5, 14, 30, 0.72);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 240, 255, 0.55);
+  box-shadow: 0 0 22px rgba(0, 240, 255, 0.15);
+}
+
+.feature-card h3 {
+  margin: 0.75rem 0;
+  color: white;
+}
+
+.feature-card p {
+  margin: 0.7rem 0 0;
+  color: #c5cbe8;
+}
+
+.feature-icon {
+  display: block;
+  font-size: 2rem;
+}
+
+
+/* =========================================================
+   PLAYER JOURNEY
+========================================================= */
+
+.roadmap-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.roadmap-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 240, 255, 0.22);
+  border-radius: 16px;
+  background: rgba(5, 14, 30, 0.68);
+}
+
+.roadmap-item h3 {
+  margin: 0 0 0.5rem;
+}
+
+.roadmap-item p {
+  margin: 0;
+  color: #c5cbe8;
+}
+
+.roadmap-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-width: 52px;
+  height: 52px;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  border-radius: 12px;
+  color: #00f0ff;
+  font-weight: 700;
+  box-shadow: inset 0 0 15px rgba(0, 240, 255, 0.08);
+}
+
+
+/* =========================================================
+   DEVELOPMENT STATUS
+========================================================= */
+
+.development-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.development-panel {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 240, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(5, 14, 30, 0.72);
+}
+
+.development-panel h3 {
+  margin: 0.45rem 0 1rem;
+}
+
+.development-list {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  color: #c5cbe8;
+}
+
+.development-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.development-list li::marker {
+  color: #00f0ff;
+}
+
+
+/* =========================================================
+   DEVELOPMENT ROADMAP
+========================================================= */
+
+.project-roadmap {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.project-roadmap-stage {
+  position: relative;
+  min-width: 0;
+  padding: 1.35rem;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 18px;
+  background: rgba(5, 14, 30, 0.7);
+}
+
+.project-roadmap-stage h3 {
+  margin: 1rem 0 0.6rem;
+}
+
+.project-roadmap-stage p {
+  margin: 0;
+  color: #c5cbe8;
+  font-size: 0.95rem;
+}
+
+.project-roadmap-stage.active-stage {
+  border-color: rgba(0, 240, 255, 0.7);
+  box-shadow:
+    0 0 22px rgba(0, 240, 255, 0.2),
+    inset 0 0 20px rgba(0, 240, 255, 0.05);
+}
+
+.stage-status {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  border-radius: 999px;
+  color: #aaf6ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   CURRENCY SECTION
+========================================================= */
+
+.currency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.currency-card {
+  min-width: 0;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 240, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(5, 14, 30, 0.72);
+}
+
+.currency-card h3 {
+  margin: 0.5rem 0;
+}
+
+.currency-card p {
+  color: #c5cbe8;
+}
+
+.currency-card .currency-icon {
+  display: block;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   SUPPORTER NOTICE
+========================================================= */
+
+.supporter-notice {
+  width: 100%;
+  margin: 2rem auto;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid rgba(138, 46, 255, 0.42);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 240, 255, 0.06),
+      rgba(138, 46, 255, 0.12)
+    ),
+    rgba(5, 14, 30, 0.8);
+  text-align: center;
+}
+
+.supporter-notice h2 {
+  margin: 0 0 1rem;
+}
+
+.supporter-notice p {
+  max-width: 820px;
+  margin: 0.75rem auto;
+  color: #c5cbe8;
+}
+
+.conversion-rate {
+  margin: 1.25rem auto !important;
+  color: #00f0ff !important;
+  font-size: clamp(1.1rem, 3vw, 1.45rem);
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.45);
+}
+
+
+/* =========================================================
+   PROJECT SUPPORT SECTION
+========================================================= */
+
+.project-support-section {
+  text-align: center;
+}
+
+.project-support-content {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.project-support-content p {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #c5cbe8;
+}
+
+.project-support-content .hud-buttons {
+  justify-content: center;
+}
+
+.project-disclaimer,
+.project-closing {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.project-page-buttons {
+  justify-content: center;
+}
+
+
+/* =========================================================
+   STORE INTRO
+========================================================= */
+
+.store-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(5, 14, 30, 0.55);
+}
+
+.store-hero-core {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  flex: 0 1 240px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(0, 240, 255, 0.35));
+}
+
+.store-intro-copy {
+  flex: 1 1 400px;
+  min-width: 0;
+  max-width: 650px;
+  text-align: left;
+}
+
+.store-intro-copy h2 {
+  margin: 0.5rem 0 1rem;
+}
+
+.store-intro-copy p:not(.player-label) {
+  color: #c5cbe8;
+}
+
+
+/* =========================================================
+   NOVA CORE PACKS
+========================================================= */
+
+.core-pack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.5rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.core-pack {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.75rem 1.35rem;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(0, 240, 255, 0.1),
+      rgba(138, 46, 255, 0.06)
+    ),
+    rgba(5, 14, 30, 0.72);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.core-pack:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 0 28px rgba(0, 240, 255, 0.25);
+}
+
+.core-pack.featured {
+  border-color: rgba(255, 79, 216, 0.65);
+  box-shadow: 0 0 20px rgba(255, 79, 216, 0.18);
+}
+
+.core-pack.founder-pack {
+  border-color: rgba(255, 216, 77, 0.55);
+}
+
+.core-pack h2,
+.core-pack h3 {
+  margin: 0.9rem 0 0.65rem;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.core-pack strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #00f0ff;
+  font-size: 1.75rem;
+}
+
+.pack-price {
+  display: block;
+  margin-bottom: 1rem;
+  color: #ff4fd8;
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.pack-description {
+  flex: 1;
+  margin: 0;
+  color: #c5cbe8;
+  line-height: 1.6;
+}
+
+.pack-ribbon {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: #00f0ff;
+  color: #05070d;
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.featured-ribbon {
+  background: linear-gradient(90deg, #8a2eff, #ff4fd8);
+  color: white;
+}
+
+.founder-ribbon {
+  background: linear-gradient(90deg, #ff9c2f, #ffd84d);
+  color: #111;
+}
+
+.purchase-btn {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.8rem 1rem;
+}
+
+
+/* =========================================================
+   SUPPORT IMPACT CARDS
+========================================================= */
+
+.support-impact {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.support-impact > h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.impact-item {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 240, 255, 0.22);
+  border-radius: 18px;
+  background: rgba(5, 14, 30, 0.7);
+}
+
+.impact-item h3 {
+  margin: 0.75rem 0;
+}
+
+.impact-item p {
+  margin: 0;
+  color: #c5cbe8;
+}
+
+.impact-icon {
+  display: block;
+  font-size: 2rem;
+}
+
+
+/* =========================================================
+   STORE CLOSING
+========================================================= */
+
+.store-closing {
+  margin: 3rem auto 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  border-top: 1px solid rgba(0, 240, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 79, 216, 0.22);
+}
+
+.store-closing h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+.store-closing p {
+  max-width: 760px;
+  margin: 0.75rem auto;
+  color: #c5cbe8;
+}
+
+.closing-tagline {
+  color: #00f0ff !important;
+  font-size: 1.2rem;
+}
+
+.purchase-disclosure {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1050px) {
+  .project-hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero-copy {
+    text-align: center;
+  }
+
+  .project-hero-copy p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .project-hero-copy .hud-buttons {
+    justify-content: center;
+  }
+
+  .project-hero-image {
+    max-width: 800px;
+  }
+
+  .feature-grid,
+  .core-pack-grid,
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-roadmap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLETS AND PHONES
+========================================================= */
+
+@media (max-width: 700px) {
+  .project-nova-page {
+    width: min(100% - 1rem, 1200px);
+    padding-top: 1rem;
+  }
+
+  .project-hero,
+  .project-section,
+  .project-support-section {
+    padding: 1.2rem;
+  }
+
+  .project-hero .hud-top h1 {
+    font-size: clamp(2.2rem, 14vw, 3.5rem);
+  }
+
+  .project-hero-content {
+    gap: 1.5rem;
+  }
+
+  .project-hero-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  .feature-grid,
+  .development-columns,
+  .project-roadmap,
+  .currency-grid,
+  .core-pack-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-item {
+    grid-template-columns: 1fr;
+  }
+
+  .store-intro {
+    flex-direction: column;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .store-intro-copy {
+    flex-basis: auto;
+    text-align: center;
+  }
+
+  .store-hero-core {
+    max-width: 180px;
+  }
+
+  .core-pack {
+    padding: 1.5rem 1.15rem;
+  }
+    }
