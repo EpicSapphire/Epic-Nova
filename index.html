@@ -2,7 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Enter Epic Nova, discover Project Nova, join the Nova Core community, and help build the future of open-world social gaming."
+  />
 
   <title>Epic Nova | Override Reality</title>
 
@@ -11,176 +20,468 @@
 
 <body>
 
+  <!-- ===========================
+       SHARED NAVIGATION
+  ============================ -->
+
   <div id="navbar"></div>
 
+
+  <!-- ===========================
+       HERO
+  ============================ -->
+
   <header class="hero">
-    <img 
-      src="images/Official-New-Epic-Nova-Logo.png" 
-      alt="Epic Nova Logo" 
-      class="logo" 
+
+    <img
+      src="images/Official-New-Epic-Nova-Logo.png"
+      alt="Epic Nova"
+      class="logo"
     />
 
-    <p class="eyebrow">Player Access Portal</p>
-    <h1>Epic Nova</h1>
-    <p class="tagline">Override Reality.</p>
+    <p class="eyebrow">
+      Player Access Portal
+    </p>
 
-    <section class="hud-card" id="nova-core">
+    <h1>
+      Epic Nova
+    </h1>
+
+    <p class="tagline">
+      Override Reality.
+    </p>
+
+
+    <!-- ===========================
+         PLAYER ACCESS CARD
+    ============================ -->
+
+    <section
+      class="hud-card"
+      id="nova-core"
+      aria-labelledby="welcome-heading"
+    >
+
       <div class="hud-top">
-        <div>
-          <h2>Welcome to Epic Nova</h2>
 
-          <p class="subtitle">
-              The Beginning of Your Adventure
-          </p>
+        <div>
 
           <p class="eyebrow">
-              Player Access Portal
+            Player Access Portal
           </p>
+
+          <h2 id="welcome-heading">
+            Welcome to Epic Nova
+          </h2>
+
+          <p class="subtitle">
+            The Beginning of Your Adventure
+          </p>
+
         </div>
 
-          <span class="status">ONLINE</span>
+        <span class="status">
+          ONLINE
+        </span>
+
       </div>
-      
-<div class="player-card nova-guide-card">
 
-  <div class="avatar-frame">
-    <img
-      src="images/Nova-Profile-Pic.png"
-      alt="Nova Byte"
-      class="avatar-image"
-    />
-  </div>
 
-  <div class="player-info">
-    <p class="player-label">DIGITAL GUIDE</p>
+      <!-- ===========================
+           NOVA BYTE GUIDE
+      ============================ -->
 
-    <h3>👋 Hey, gamer! I'm Nova Byte.</h3>
+      <div class="player-card nova-guide-card">
 
-    <p>
-      Welcome to Epic Nova! This is where we'll share new content,
-      build Project Nova, unlock Nova Cores, and create a community
-      for gamers who love epic adventures.
-    </p>
+        <div class="avatar-frame">
 
-    <p class="nova-ready">
-      Ready for your next grand adventure? Let's go!
-    </p>
-  </div>
+          <img
+            src="images/Nova-Profile-Pic.png"
+            alt="Nova Byte, the digital guide for Epic Nova"
+            class="avatar-image"
+          />
 
-  <div class="player-badge">
-    ONLINE
-  </div>
+        </div>
 
-</div>
 
-<div class="stash-grid">
+        <div class="player-info">
 
-  <div class="stash-box">
-    <img
-      src="images/Nova-Bit.png"
-      alt="Nova Bit"
-      class="currency-icon"
-    />
+          <p class="player-label">
+            Digital Guide
+          </p>
 
-    <span>Nova Bits</span>
+          <h3>
+            👋 Hey, gamer! I'm Nova Byte.
+          </h3>
 
-    <strong class="awaiting-data">Awaiting Data</strong>
+          <p>
+            Welcome to Epic Nova! This is where we share new content,
+            develop Project Nova, build our growing gaming community,
+            and bring the world of Epic Nova to life.
+          </p>
 
-    <!--
-    <strong id="nova-bit-count">Loading...</strong>
-    -->
-  </div>
+          <p class="nova-ready">
+            Ready for your next grand adventure? Let's go!
+          </p>
 
-  <div class="stash-box">
-    <img
-      src="images/Nova-Shard.png"
-      alt="Nova Shard"
-      class="currency-icon"
-    />
+        </div>
 
-    <span>Nova Shards</span>
 
-    <strong class="awaiting-data">Awaiting Data</strong>
+        <div class="player-badge">
+          ONLINE
+        </div>
 
-    <!--
-    <strong id="nova-shard-count">Loading...</strong>
-    -->
-  </div>
+      </div>
 
-  <div class="stash-box premium">
-    <img
-      src="images/Nova-Core.png"
-      alt="Nova Core"
-      class="currency-icon"
-    />
 
-    <span>Nova Cores</span>
+      <!-- ===========================
+           NOVA STASH
+      ============================ -->
 
-    <strong class="awaiting-data">Awaiting Data</strong>
+      <div
+        class="stash-grid"
+        aria-label="Future Nova energy stash"
+      >
 
-    <!--
-    <strong id="nova-core-count">Loading...</strong>
-    -->
-  </div>
 
-</div>
+        <!-- NOVA BITS -->
 
-  <p class="store-note">
-    Player Profiles and community systems are currently in development.
-    Your personal stash and community statistics will appear here in a future update.
-  </p>
+        <article class="stash-box">
+
+          <img
+            src="images/Nova-Bit.png"
+            alt="Nova Bit"
+            class="currency-icon"
+          />
+
+          <span>
+            Nova Bits
+          </span>
+
+          <strong class="awaiting-data">
+            Awaiting Data
+          </strong>
+
+          <!--
+          Future dynamic counter:
+
+          <strong id="nova-bit-count">
+            Loading...
+          </strong>
+          -->
+
+        </article>
+
+
+        <!-- NOVA SHARDS -->
+
+        <article class="stash-box">
+
+          <img
+            src="images/Nova-Shard.png"
+            alt="Nova Shard"
+            class="currency-icon"
+          />
+
+          <span>
+            Nova Shards
+          </span>
+
+          <strong class="awaiting-data">
+            Awaiting Data
+          </strong>
+
+          <!--
+          Future dynamic counter:
+
+          <strong id="nova-shard-count">
+            Loading...
+          </strong>
+          -->
+
+        </article>
+
+
+        <!-- NOVA CORES -->
+
+        <article class="stash-box premium">
+
+          <img
+            src="images/Nova-Core.png"
+            alt="Nova Core"
+            class="currency-icon"
+          />
+
+          <span>
+            Nova Cores
+          </span>
+
+          <strong class="awaiting-data">
+            Awaiting Data
+          </strong>
+
+          <!--
+          Future dynamic counter:
+
+          <strong id="nova-core-count">
+            Loading...
+          </strong>
+          -->
+
+        </article>
+
+      </div>
+
+
+      <!-- ===========================
+           DEVELOPMENT NOTICE
+      ============================ -->
+
+      <p class="store-note">
+        Player profiles, community systems, and personal Nova stashes are
+        currently in development. Your account information, community
+        activity, and Nova Energy balance will appear here in a future update.
+      </p>
+
+
+      <!-- ===========================
+           CORE ENERGY
+      ============================ -->
 
       <div class="energy-bar">
+
         <div class="energy-label">
-          <span>Core Energy</span>
-          <span class="awaiting-data">Awaiting Data</span>
+
+          <span>
+            Core Energy
+          </span>
+
+          <span class="awaiting-data">
+            Awaiting Data
+          </span>
+
         </div>
 
-        <div class="bar">
-          <div class="fill"></div>
+        <div
+          class="bar"
+          role="progressbar"
+          aria-label="Future Core Energy status"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+
+          <div class="fill awaiting-energy"></div>
+
         </div>
+
       </div>
+
+
+      <!-- ===========================
+           PRIMARY ACTIONS
+      ============================ -->
 
       <div class="hud-buttons">
-        <a href="nova-core.html" class="btn">Enter Nova Core</a>
-        <a href="buy-cores.html" class="btn ghost">Buy Nova Cores</a>
-        <a href="project-nova.html" class="btn ghost">Project Nova</a>
+
+        <a
+          href="nova-core.html"
+          class="btn"
+        >
+          Enter the Nova Core
+        </a>
+
+        <a
+          href="project-nova.html"
+          class="btn ghost"
+        >
+          Explore Project Nova
+        </a>
+
+        <a
+          href="buy-cores.html"
+          class="btn ghost"
+        >
+          Support Epic Nova
+        </a>
+
       </div>
+
     </section>
+
   </header>
+
+
+  <!-- ===========================
+       MAIN CONTENT
+  ============================ -->
 
   <main>
 
-    <section class="section" id="nova-core-hub">
-  <p class="eyebrow">Join the Adventure</p>
 
-  <h2>Enter the Nova Core</h2>
+    <!-- ===========================
+         NOVA CORE COMMUNITY
+    ============================ -->
 
-  <p>
-    The Nova Core is the heart of the Epic Nova universe — our early community hub
-    for updates, future profiles, supporter access, and Project Nova development.
-  </p>
+    <section
+      class="section"
+      id="nova-core-hub"
+      aria-labelledby="nova-core-heading"
+    >
 
-  <div class="hud-buttons">
-    <a href="nova-core.html" class="btn">Enter Nova Core</a>
-    <a href="communications.html" class="btn ghost">Send a Transmission</a>
-  </div>
-</section>
-
-    <section class="section alt" id="nova-points">
-      <p class="eyebrow">This Is Your Game</p>
-      <h2>Bits. Shards. Cores.</h2>
-      <p>
-        Nova Bits and Shards are part of the future Epic Nova experience.
-        Nova Cores are the premium energy of the Nova Core system.
+      <p class="eyebrow">
+        Join the Adventure
       </p>
+
+      <h2 id="nova-core-heading">
+        Enter the Nova Core
+      </h2>
+
+      <p>
+        The Nova Core is the heart of the Epic Nova community—an evolving hub
+        for project updates, future player profiles, supporter recognition,
+        community features, and the continued development of Project Nova.
+      </p>
+
+      <div class="hud-buttons">
+
+        <a
+          href="nova-core.html"
+          class="btn"
+        >
+          Enter the Nova Core
+        </a>
+
+        <a
+          href="communications.html"
+          class="btn ghost"
+        >
+          Send a Transmission
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         NOVA ENERGY SYSTEM
+    ============================ -->
+
+    <section
+      class="section alt"
+      id="nova-energy"
+      aria-labelledby="nova-energy-heading"
+    >
+
+      <p class="eyebrow">
+        The Nova Energy System
+      </p>
+
+      <h2 id="nova-energy-heading">
+        Bits. Shards. Cores.
+      </h2>
+
+      <p>
+        Nova Bits, Nova Shards, and Nova Cores are the three forms of Nova
+        Energy planned for the Epic Nova universe.
+      </p>
+
+      <p>
+        Bits and Shards are being designed for future activities, rewards,
+        collectibles, customization, and progression. Nova Cores represent
+        the rarest form of Nova Energy and currently serve as symbols of
+        support for Epic Nova and Project Nova.
+      </p>
+
+      <div class="hud-buttons">
+
+        <a
+          href="buy-cores.html"
+          class="btn"
+        >
+          Become a Nova Core Supporter
+        </a>
+
+        <a
+          href="project-nova.html"
+          class="btn ghost"
+        >
+          Discover Project Nova
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         PROJECT NOVA
+    ============================ -->
+
+    <section
+      class="section"
+      id="project-nova-preview"
+      aria-labelledby="project-nova-heading"
+    >
+
+      <p class="eyebrow">
+        Building the Future
+      </p>
+
+      <h2 id="project-nova-heading">
+        Discover Project Nova
+      </h2>
+
+      <p>
+        Project Nova is the larger creative and development initiative behind
+        Epic Nova's future game, community, technology, world-building, and
+        connected player experiences.
+      </p>
+
+      <p>
+        Its current game project, <strong>Worlds Unwritten</strong>,
+        is a working-title open-world social RPG centered on character
+        customization, personal spaces, exploration, world-building, and
+        shared adventures.
+      </p>
+
+      <div class="hud-buttons">
+
+        <a
+          href="project-nova.html"
+          class="btn"
+        >
+          Explore Project Nova
+        </a>
+
+        <a
+          href="buy-cores.html"
+          class="btn ghost"
+        >
+          Help Build the Future
+        </a>
+
+      </div>
+
     </section>
 
   </main>
 
+
+  <!-- ===========================
+       SHARED FOOTER
+  ============================ -->
+
   <div id="footer"></div>
+
+
+  <!-- ===========================
+       SITE SCRIPT
+  ============================ -->
 
   <script src="JS/script.js"></script>
 
 </body>
+</html>
 </html>
