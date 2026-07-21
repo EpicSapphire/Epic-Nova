@@ -320,8 +320,12 @@ h1 {
 }
 
 /* ===========================
-   STASH
+   HOMEPAGE STASH
 =========================== */
+
+.hero > .hud-card {
+  width: min(100%, 920px);
+}
 
 .stash-grid {
   display: grid;
@@ -332,11 +336,10 @@ h1 {
 
 .stash-box {
   min-width: 0;
-  padding: 24px 14px;
-  text-align: center;
+  padding: 24px 12px;
+  overflow: hidden;
 
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  border-radius: 18px;
+  text-align: center;
 
   background: linear-gradient(
     145deg,
@@ -344,11 +347,13 @@ h1 {
     rgba(255, 255, 255, 0.04)
   );
 
-  transition: transform 0.25s ease;
-}
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 18px;
 
-.stash-box:hover {
-  transform: translateY(-4px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .currency-icon {
@@ -359,35 +364,123 @@ h1 {
 
   object-fit: contain;
 
-  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.7));
-  transition: transform 0.25s ease;
-}
+  filter: drop-shadow(
+    0 0 12px rgba(0, 240, 255, 0.7)
+  );
 
-.stash-box:hover .currency-icon {
-  transform: scale(1.12);
+  transition: transform 0.25s ease;
 }
 
 .stash-box span {
   display: block;
   margin-bottom: 8px;
+
   color: #aaf6ff;
   font-size: 0.8rem;
 }
 
-.stash-box strong {
+.stash-box strong.awaiting-data {
   display: block;
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 12px;
 
   color: #ffffff;
-  font-size: clamp(1rem, 1.45vw, 1.4rem);
+
+  font-size: clamp(0.78rem, 1.15vw, 1.05rem);
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  text-align: center;
+  text-transform: uppercase;
 
+  white-space: nowrap;
   overflow-wrap: normal;
   word-break: normal;
+
+  text-shadow:
+    0 0 8px rgba(0, 240, 255, 0.9);
+}
+
+.premium,
+.featured {
+  border-color: rgba(255, 79, 216, 0.7);
+
+  box-shadow:
+    0 0 18px rgba(255, 79, 216, 0.25);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stash-box:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(0, 240, 255, 0.55);
+
+    box-shadow:
+      0 0 20px rgba(0, 240, 255, 0.18);
+  }
+
+  .stash-box:hover .currency-icon {
+    transform: scale(1.08);
+  }
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 800px) {
+  .hero > .hud-card {
+    width: min(100%, 720px);
+  }
+
+  .stash-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stash-box {
+    padding: 22px 18px;
+  }
+
+  .stash-box strong.awaiting-data {
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 500px) {
+  .hero > .hud-card {
+    width: 100%;
+  }
+
+  .stash-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stash-box {
+    padding: 20px 14px;
+  }
+
+  .currency-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .stash-box span {
+    font-size: 0.85rem;
+  }
+
+  .stash-box strong.awaiting-data {
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
 }
 
 
